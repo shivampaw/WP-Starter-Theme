@@ -7,11 +7,13 @@
  * @package shivampaw
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar' ); ?>
-</aside><!-- #secondary -->
+<div class="col-lg-4">
+	<aside id="secondary" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar' ); ?>
+	</aside><!-- #secondary -->
+</div>

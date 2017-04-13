@@ -95,8 +95,8 @@ function shivampaw_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'shivampaw' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'shivampaw_widgets_init' );
@@ -142,20 +142,20 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-
-
+/**
+ * Add Bootstrap navbar class to the `li`
+ */
 add_filter('nav_menu_css_class','add_class_to_navbar_li',1,3);
-add_filter( 'nav_menu_link_attributes', 'add_class_to_navbar_link', 10, 3 );
-
 function add_class_to_navbar_li($classes, $item, $args) {
-	if($args->theme_location == 'primary') {
-		$classes[] = 'nav-item';
-	}
+	$classes[] = 'nav-item';
 	return $classes;
 }
 
+/**
+ * Add Bootstrap navbar class to the `li a`
+ */
+add_filter( 'nav_menu_link_attributes', 'add_class_to_navbar_link', 10, 3 );
 function add_class_to_navbar_link( $atts, $item, $args ) {
-	$class = 'nav-link'; // or something based on $item
-	$atts['class'] = $class;
+	$atts['class'] = 'nav-link';
 	return $atts;
 }

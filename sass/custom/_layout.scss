@@ -1,0 +1,15 @@
+ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+#secondary {
+	li {
+		border-bottom: 1px solid $grey;
+		list-style-type: none;
+	}
+
+	.widget {
+		padding: 15px;
+	}
+}

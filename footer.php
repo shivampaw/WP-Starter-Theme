@@ -9,6 +9,7 @@
  * @package shivampaw
  */
 
+get_sidebar();
 ?>
 
 	<footer class="site-footer">
@@ -16,7 +17,6 @@
 			<?php printf( esc_html__( 'Developed by %1$s.', 'shivampaw' ), '<a href="https://www.shivampaw.com/" rel="designer">Shivam Paw</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

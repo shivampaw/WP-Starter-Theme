@@ -1,0 +1,17 @@
+.entry-meta {
+	color: $grey;
+	font-size: 14px;
+
+	.byline {
+		display: inline;
+	}
+}
+
+.entry-content, .entry-summary, .page-content {
+    border-bottom: 1px dashed $grey;
+    margin: 1em 0;
+}
+
+article.entry {
+	margin-bottom: 40px;
+}
