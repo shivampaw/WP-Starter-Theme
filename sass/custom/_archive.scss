@@ -1,6 +1,8 @@
 .entry-meta {
 	color: $grey;
 	font-size: 14px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted $grey;
 
 	.byline {
 		display: inline;
@@ -8,10 +10,10 @@
 }
 
 .entry-content, .entry-summary, .page-content {
-    border-bottom: 1px dashed $grey;
-    margin: 1em 0;
+    border-bottom: 1px dotted $grey;
+    margin: 10px 0;
 }
 
-article.entry {
-	margin-bottom: 40px;
+article.post {
+	margin-bottom: 50px;
 }

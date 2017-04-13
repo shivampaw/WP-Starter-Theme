@@ -5,11 +5,20 @@ ol, ul {
 
 #secondary {
 	li {
-		border-bottom: 1px solid $grey;
+		border-bottom: 1px dotted $grey;
 		list-style-type: none;
+		padding: 5px 0;
 	}
 
 	.widget {
 		padding: 15px;
+	}
+}
+
+
+
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+	    position: fixed;
 	}
 }

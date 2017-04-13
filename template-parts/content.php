@@ -15,24 +15,25 @@
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php shivampaw_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
+			the_title( '<a href="'.get_permalink().'"><h2 class="entry-title">', '</h2></a>' );
 		endif; ?>
+
+		<div class="entry-meta">
+			Posted on <?php the_date(); ?> by <?php the_author(); ?> 
+			<?php if ( get_edit_post_link() ) :
+				- edit_post_link('Edit', ' - '); 
+			endif; ?>
+		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'shivampaw' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+
+			if ( is_single() ) :
+				the_content();
+			else :
+				the_excerpt();
+			endif;
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'shivampaw' ),
@@ -42,6 +43,11 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php shivampaw_entry_footer(); ?>
+		<div class="post-categories">
+			Posted Under: <?php the_category(', '); ?>
+		</div>
+		<div class="post-categories">
+			<?php the_tags(); ?>
+		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

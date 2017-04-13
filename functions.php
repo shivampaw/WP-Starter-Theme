@@ -107,9 +107,7 @@ add_action( 'widgets_init', 'shivampaw_widgets_init' );
 function shivampaw_scripts() {
 	wp_enqueue_style( 'shivampaw-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'shivampaw-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'shivampaw-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'shivampaw-javascript', get_template_directory_uri() . '/js/script.min.js', array('jquery'), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -159,3 +157,26 @@ function add_class_to_navbar_link( $atts, $item, $args ) {
 	$atts['class'] = 'nav-link';
 	return $atts;
 }
+
+/**
+ * Filter the excerpt "read more" string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return '[...] &nbsp; <a href="'.get_permalink().'" title="'.get_the_title().'">Continue Reading &rarr;</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+// Return an alternate title, without prefix, for every type used in the get_the_archive_title().
+add_filter('get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+        $title = single_cat_title( 'Posts Filed Under: ', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( 'Posts Tagged With: ', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">Posts By: ' . get_the_author() . '</span>';
+    } else {
+        $title = __( 'Blog Posts' );
+    }
+    return $title;
+});
