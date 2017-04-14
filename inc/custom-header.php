@@ -19,10 +19,12 @@
 function shivampaw_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'shivampaw_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-text-color'     => 'fff',
+		'header-text'			 => true,
+		'width'                  => 1440,
+		'height'                 => 300,
 		'flex-height'            => true,
+		'flex-width'			 => true,
 		'wp-head-callback'       => 'shivampaw_header_style',
 	) ) );
 }
@@ -61,9 +63,30 @@ function shivampaw_header_style() {
 		// If the user has set a custom color for the text use that.
 		else :
 	?>
+		.header-image {
+			background: url(<?php echo get_header_image(); ?>) center center;
+			min-height: 300px;
+			position: relative;
+		}
+		.header-image .header-image-text{
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+		    top: 0;
+		    bottom: 0;
+		    text-align: center;
+		    height: 50%;
+		}
 		.site-title a,
 		.site-description {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
+			font-size: 24px;
+			font-weight: bolder;
+		}
+		.site-title a {
+			font-size: 38px;
+			font-weight: bolder;
 		}
 	<?php endif; ?>
 	</style>

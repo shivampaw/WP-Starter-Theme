@@ -40,6 +40,15 @@
 			?>
 		</nav>
 	</header>
+
+	<?php if ( get_header_image() ) : ?>
+        <div class="header-image">
+        	<div class="header-image-text">
+		        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+		        <p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	        </div>
+        </div>
+	<?php endif; ?>
 	
 
 	<div class="container">
