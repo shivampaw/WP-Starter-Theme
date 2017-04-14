@@ -21,7 +21,7 @@
 		<div class="entry-meta">
 			Posted on <?php the_date(); ?> by <?php the_author(); ?> 
 			<?php if ( get_edit_post_link() ) :
-				edit_post_link('Edit', ' - '); 
+				edit_post_link( __( 'Edit', 'shivampaw' ), ' - '); 
 			endif; ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

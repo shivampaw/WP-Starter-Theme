@@ -27,7 +27,7 @@
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
-			<?php edit_post_link('Edit'); ?>
+			<?php edit_post_link( __( 'Edit Page', 'shivampaw' ) ); ?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-## -->

@@ -85,27 +85,27 @@ if ( post_password_required() ) {
 
 	$fields =  array(
 	  'author' =>
-	    '<div class="form-group"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
+	    '<div class="form-group"><label for="author">' . __( 'Name', 'shivampaw' ) . '</label> ' .
 	    ( $req ? '<span class="required">*</span>' : '' ) .
 	    '<input id="author" name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 	    '" size="30"' . $aria_req . ' /></div>',
 
 	  'email' =>
-	    '<div class="form-group"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
+	    '<div class="form-group"><label for="email">' . __( 'Email', 'shivampaw' ) . '</label> ' .
 	    ( $req ? '<span class="required">*</span>' : '' ) .
 	    '<input id="email" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 	    '" size="30"' . $aria_req . ' /></div>',
 
 	  'url' =>
-	    '<div class="form-group"><label for="url">' . __( 'Website', 'domainreference' ) . '</label>' .
+	    '<div class="form-group"><label for="url">' . __( 'Website', 'shivampaw' ) . '</label>' .
 	    '<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) .
 	    '" size="30" /></div>',
 	);
 
 	comment_form(array (
 			'class_submit'	=>	'btn btn-primary',
-			'comment_field'	=>	'<div class="form-group"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" class="form-control" rows="8" aria-required="true"></textarea></div>',
-			'fields'		=>	$fields
+			'comment_field'	=>	'<div class="form-group"><label for="comment">' . _x( 'Comment', 'noun', 'shivampaw' ) . '</label><textarea id="comment" name="comment" class="form-control" rows="8" aria-required="true"></textarea></div>',
+			'fields'		=>	$fields,
 		));
 	?>
 

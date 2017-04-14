@@ -20,6 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 	<!-- Header Navbar
 	=================================================== -->
 	<header class="site-header">
@@ -27,9 +28,17 @@
 			<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#nav-content" aria-expanded="false">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand" href="<?php echo home_url(); ?>">
-				<?php echo bloginfo('name'); ?>
-			</a>
+			
+				<?php
+				if ( has_custom_logo() ) :
+					the_custom_logo();
+				else: ?>
+					<a class="navbar-brand" href="<?php echo home_url(); ?>">
+						<?php echo bloginfo('name'); ?>
+					</a>
+				<?php
+				endif; ?>
+			
 			<?php
 				wp_nav_menu(array(
 					'theme_location'	=> 'primary',
@@ -51,7 +60,7 @@
 	<?php endif; ?>
 	
 
-	<div class="container">
+	<div id="page" class="container">
 		<div class="row">
 			<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 				<div class="col-lg-8">

@@ -1,11 +1,14 @@
-#secondary, #footer-widgets {
+.widget {
+	padding: 15px;
+
 	li {
 		border-bottom: 1px dotted $grey;
 		list-style-type: none;
 		padding: 5px 0;
 	}
 
-	.widget {
-		padding: 15px;
+	ul, ol {
+		margin: 0;
+		padding: 0;
 	}
 }

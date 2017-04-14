@@ -16,16 +16,18 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) :
-
-			if ( ! is_front_page() ) :
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<p class="lead">', '</p>');
-			else:
-				echo '<h1 class="page-title">'; bloginfo('name'); echo '</h1>';
-				echo '<p class="lead">'; bloginfo('description'); echo '</p>';
-			endif;
-
+		if ( have_posts() ) : ?>
+			<div class="archive-details">
+				<?php
+				if ( ! is_front_page() ) :
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<p>', '</p>');
+				else:
+					echo '<h1 class="page-title">'; bloginfo('name'); echo '</h1>';
+					echo '<p>'; bloginfo('description'); echo '</p>';
+				endif; ?>
+			</div>
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
