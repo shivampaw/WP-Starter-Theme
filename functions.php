@@ -166,8 +166,8 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Add Bootstrap navbar class to the `li`
  */
-add_filter('nav_menu_css_class','add_class_to_navbar_li',1,3);
-function add_class_to_navbar_li($classes, $item, $args) {
+add_filter('nav_menu_css_class','shivampaw_add_class_to_navbar_li',1,3);
+function shivampaw_add_class_to_navbar_li( $classes, $item, $args ) {
 	$classes[] = 'nav-item';
 	return $classes;
 }
@@ -175,8 +175,8 @@ function add_class_to_navbar_li($classes, $item, $args) {
 /**
  * Add Bootstrap navbar class to the `li a`
  */
-add_filter( 'nav_menu_link_attributes', 'add_class_to_navbar_link', 10, 3 );
-function add_class_to_navbar_link( $atts, $item, $args ) {
+add_filter( 'nav_menu_link_attributes', 'shivampaw_add_class_to_navbar_li_a', 10, 3 );
+function shivampaw_add_class_to_navbar_li_a( $atts, $item, $args ) {
 	$atts['class'] = 'nav-link';
 	return $atts;
 }
@@ -184,14 +184,23 @@ function add_class_to_navbar_link( $atts, $item, $args ) {
 /**
  * Filter the excerpt "read more" string.
  */
-function wpdocs_excerpt_more( $more ) {
+function shivampaw_change_excerpt_more( $more ) {
     return '[...] &nbsp; <a href="'.get_permalink().'" title="'.get_the_title().'">Continue Reading &rarr;</a>';
 }
-add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+add_filter( 'excerpt_more', 'shivampaw_change_excerpt_more' );
 
+/**
+ * Change excerpt length
+ */
+function shivampaw_change_excerpt_length($length) {
+	return 60;
+}
+add_filter('excerpt_length', 'shivampaw_change_excerpt_length');
 
-// Return an alternate title, without prefix, for every type used in the get_the_archive_title().
-add_filter('get_the_archive_title', function ($title) {
+/**
+ * Customise Archive Titles for specific archives
+ */
+add_filter('get_the_archive_title', function ( $title ) {
     if ( is_category() ) {
         $title = single_cat_title( 'Posts Filed Under: ', false );
     } elseif ( is_tag() ) {
@@ -203,3 +212,8 @@ add_filter('get_the_archive_title', function ($title) {
     }
     return $title;
 });
+
+/**
+ * Set default media link location to 'None'
+ */
+update_option( 'image_default_link_type', 'none' ); 

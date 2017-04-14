@@ -1,0 +1,105 @@
+p.comment-awaiting-moderation {
+    padding: 7px 10px;
+    background: $red;
+    border-radius: 10px;
+    color: $dark-red;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.comment {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px 0px;
+    list-style-type: none;
+}
+
+footer.comment-meta {
+    margin: 5px 0;
+    padding: 10px 5px;
+}
+
+.comment-respond {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+ ol.comment-list {
+
+     list-style:none; 
+     margin:0 0 1em; 
+     padding:0; 
+     text-indent:0;
+
+    li {}
+    li.alt {}
+    li.bypostauthor {}
+    li.byuser {}
+    li.comment-author-admin {}
+
+
+    li.comment {
+        border: 1px solid $grey; 
+        border-radius: 5px;
+        padding:1em;
+
+        .comment-author {} // end .comment-author
+
+        
+        div.vcard {
+
+            font-size: 14px;
+            
+            cite.fn {
+                a.url {}
+             } // end cite.fn
+
+             img.avatar {
+                border: 3px solid $grey; 
+                float: right; 
+                width: 50px;
+             } // end .avatar
+
+             img.avatar-32 {} // end .avatar-32
+             img.photo {} // end .photo
+             span.says {} // ebd .says
+
+        }  // end .vcard
+
+        div.comment-metadata {
+            font-size: 12px;
+        } // end .commentmetadata
+
+        p {font-size: 14px;} // end p
+
+        ol {
+            font-size: 12px;
+            list-style: none;
+            margin: 0 0 0 20px;
+        } // end ul
+
+        div.reply {
+
+            font-size: 12px;
+
+            a {font-weight: bold;} // end a
+
+        } // end reply
+
+         ol.children {
+            list-style:none; 
+            margin: 12px; 
+            text-indent:0;
+
+        }  // end ul.children
+
+    }  // end li.comment
+
+    li.even { background: $white; }
+    li.odd { background: $light-grey; }
+    li.parent { border-left:5px solid $dark-grey; }
+    li.thread-alt {}
+    li.thread-even {}
+    li.thread-odd {}
+
+ } // end commentlist

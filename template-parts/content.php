@@ -21,7 +21,7 @@
 		<div class="entry-meta">
 			Posted on <?php the_date(); ?> by <?php the_author(); ?> 
 			<?php if ( get_edit_post_link() ) :
-				- edit_post_link('Edit', ' - '); 
+				edit_post_link('Edit', ' - '); 
 			endif; ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -32,7 +32,21 @@
 			if ( is_single() ) :
 				the_content();
 			else :
-				the_excerpt();
+				if ( has_post_thumbnail() ) : ?>
+					<div class="row">
+						<div class="col-md-4 text-center">
+					        <?php the_post_thumbnail('medium', [
+					        	'class'	=>	'mb-2 img-fluid'
+					        ]); ?>
+					    </div>
+					    <div class="col-md-8">
+					    	<?php the_excerpt(); ?>
+					    </div>
+				    </div>
+				<?php 
+				else:
+					the_excerpt();
+				endif;
 			endif;
 
 			wp_link_pages( array(
@@ -44,7 +58,7 @@
 
 	<footer class="entry-footer">
 		<div class="post-categories">
-			Posted Under: <?php the_category(', '); ?>
+			Filed Under: <?php the_category(', '); ?>
 		</div>
 		<div class="post-categories">
 			<?php the_tags(); ?>
