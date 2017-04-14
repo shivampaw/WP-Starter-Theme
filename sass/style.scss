@@ -22,11 +22,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Bootstrap
 # Normalize
 # Typography
 # Elements
-# Forms
 # Navigation
 	## Links
 	## Menus
@@ -41,15 +39,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Bootstrap
 # Custom
 --------------------------------------------------------------*/
 @import "mixins/mixins-master";
 @import "variables-site/variables-site";
-
-/*--------------------------------------------------------------
-# Bootstrap
---------------------------------------------------------------*/
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -65,11 +59,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Elements
 --------------------------------------------------------------*/
 @import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
 
 /*--------------------------------------------------------------
 # Navigation
@@ -110,6 +99,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css";
 
 /*--------------------------------------------------------------
 # Custom
