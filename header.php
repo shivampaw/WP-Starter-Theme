@@ -44,7 +44,9 @@
 					'theme_location'	=> 'primary',
 					'container_class'	=> 'navbar-collapse collapse',
 					'container_id'		=> 'nav-content',
-					'menu_class'		=>	'navbar-nav mr-auto mr-sm-0 ml-sm-auto'
+					'menu_class'		=>	'navbar-nav mr-auto mr-sm-0 ml-sm-auto',
+					'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                	'walker'            =>	new wp_bootstrap_navwalker(),
 				));
 			?>
 		</nav>
@@ -62,8 +64,4 @@
 
 	<div id="page" class="container">
 		<div class="row">
-			<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-				<div class="col-lg-8">
-			<?php else : ?>
-				<div class="col-lg-10 mx-auto">
-			<?php endif; ?>
+		

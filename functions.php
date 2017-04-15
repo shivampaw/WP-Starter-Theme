@@ -192,6 +192,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Load BS4 Nav Walker
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+
+/**
  * Add Bootstrap navbar class to the `li`
  */
 add_filter('nav_menu_css_class','shivampaw_add_class_to_navbar_li',1,3);

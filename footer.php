@@ -8,11 +8,10 @@
  *
  * @package shivampaw
  */
-
-get_sidebar();
 ?>
-		</div>
-	</div>
+		</div><!-- .row -->
+	</div><!-- .container -->
+	
 	<footer class="site-footer">
 		<div class="container-fluid">
 		<?php if ( is_active_sidebar( 'footer-widget-1' ) || 
