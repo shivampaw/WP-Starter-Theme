@@ -29,8 +29,8 @@ function shivampaw_setup() {
 
 	// Add theme support for custom logo
 	add_theme_support( 'custom-logo' , array (
-			'height'      => 50,
-			'width'       => 200,
+			'height'      => 38,
+			'width'       => 150,
 			'flex-width'  => true,
 			'flex-height' => true,
 		));
@@ -157,8 +157,8 @@ function shivampaw_scripts() {
 	wp_enqueue_style( 'shivampaw-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery-tether', get_template_directory_uri() . '/js/dist/jquery.tether.min.js', array('jquery') );
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/dist/bootstrap.min.js', array('jquery') );
-	wp_enqueue_script( 'shivampaw-javascript', get_template_directory_uri() . '/js/dist/main.js' );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/dist/bootstrap.min.js', null, null, true );
+	wp_enqueue_script( 'shivampaw-javascript', get_template_directory_uri() . '/js/dist/main.js', null, null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
