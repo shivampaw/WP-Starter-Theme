@@ -1,14 +1,12 @@
 p.comment-awaiting-moderation {
+    @extend .bg-warning;
+    @extend .text-white;
     padding: 7px 10px;
-    background: $red;
     border-radius: 10px;
-    color: $dark-red;
-    font-weight: bolder;
-    font-size: 16px;
 }
 
 .comment {
-    border: 1px solid grey;
+    border: 1px solid $gray;
     padding: 10px;
     margin: 10px 0px;
     list-style-type: none;
@@ -39,7 +37,7 @@ footer.comment-meta {
 
 
     li.comment {
-        border: 1px solid $grey; 
+        border: 1px solid $gray; 
         border-radius: 5px;
         padding:1em;
 
@@ -55,7 +53,7 @@ footer.comment-meta {
              } // end cite.fn
 
              img.avatar {
-                border: 1px solid $grey;
+                border: 1px solid $gray;
              } // end .avatar
 
              img.avatar-32 {} // end .avatar-32
@@ -94,8 +92,8 @@ footer.comment-meta {
     }  // end li.comment
 
     li.even { background: $white; }
-    li.odd { background: $light-grey; }
-    li.parent { border-left:5px solid $dark-grey; }
+    li.odd { background: $gray-lighter; }
+    li.parent { border-left:5px solid $gray }
     li.thread-alt {}
     li.thread-even {}
     li.thread-odd {}

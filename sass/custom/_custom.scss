@@ -1,6 +1,9 @@
 // Create custom scss partials in this directory and include them here. This custom partial is loaded after all the other CSS.
 
-@import "variables";
+@import "variables"; // custom vars for non-bs and bs
+
+@import "../bootstrap/bootstrap"; // load bootstrap framework
+@import "bootstrap/bootstrap"; // this scss has access to bootstrap mixins etc.
 
 @import "layouts/layouts";
 @import "templates/templates";
