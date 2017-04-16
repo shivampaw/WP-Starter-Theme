@@ -1,0 +1,11 @@
+// add bootstrap scss here
+.page-numbers {
+	@extend .page-link;
+}
+
+.page-numbers.current {
+	z-index: 2;
+    color: $pagination-active-color;
+    background-color: $pagination-active-bg;
+    border-color: $pagination-active-border;
+}
