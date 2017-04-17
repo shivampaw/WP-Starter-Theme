@@ -8,6 +8,11 @@
  */
 
 get_header(); ?>
+<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
+	<div class="col-lg-8" id="site-content">
+<?php else : ?>
+	<div class="col-lg-10 mx-auto" id="site-content">
+<?php endif; ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
@@ -29,4 +34,5 @@ get_header(); ?>
 	</div>
 
 <?php
+get_sidebar();
 get_footer();

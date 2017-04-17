@@ -42,7 +42,7 @@ get_header(); ?>
 
 			endwhile;
 
-			bootstrap_pagination();
+			shivampaw_bootstrap_pagination();
 
 		else :
 

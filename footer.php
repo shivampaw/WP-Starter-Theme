@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="site-info text-center">
-						<?php _e( 'Developed by <a href="https://www.shivampaw.com/" rel="designer">Shivam Paw</a>.', 'shivampaw' ); ?>
+						<?php _e( 'Developed by <a href="'. esc_url('https://www.shivampaw.com/') .'" rel="designer">Shivam Paw</a>.', 'shivampaw' ); ?>
 					</div><!-- .site-info -->
 				</div>
 			</div>

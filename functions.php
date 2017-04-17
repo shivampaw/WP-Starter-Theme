@@ -251,13 +251,11 @@ add_filter('get_the_archive_title', function ( $title ) {
  */
 update_option( 'image_default_link_type', 'none' ); 
 
-
-
 /*
  * custom pagination with bootstrap .pagination class
  * source: http://www.ordinarycoder.com/paginate_links-class-ul-li-bootstrap/
  */
-function bootstrap_pagination( $echo = true ) {
+function shivampaw_bootstrap_pagination( $echo = true ) {
 	global $wp_query;
 
 	$big = PHP_INT_MAX; // need an unlikely integer
