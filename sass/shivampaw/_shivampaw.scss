@@ -1,9 +1,12 @@
-// Create custom scss partials in this directory and include them here. This custom partial is loaded after all the other CSS.
+/*
+ * All our custom SCSS is imported here.
+ *
+ */
 
-@import "variables"; // custom vars for non-bs and bs
+@import "variables"; // custom vars for bootstrap and non-boostrap
 
 @import "../bootstrap/bootstrap"; // load bootstrap framework
-@import "bootstrap/bootstrap"; // this scss has access to bootstrap mixins etc.
+@import "bootstrap/bootstrap"; // load all custom modifications to bootstrap framework
 
-@import "layouts/layouts";
-@import "templates/templates";
+@import "layouts/layouts"; // load css for WP layouts
+@import "templates/templates"; // load css for WP templates
