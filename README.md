@@ -1,3 +1,8 @@
-Starter theme for WP based of _s and Bootstrap 4.
+#Shivam Paw WP Starter Theme
 
-Modified to fit my needs with some custom functionality etc.
+### Starter theme for WordPress based of _s and Bootstrap 4.
+
+## Install & Use
+- npm install
+- npm run dev (gulp watch)
+- num run build (gulp)
