@@ -1,4 +1,4 @@
-#Shivam Paw WP Starter Theme
+# Shivam Paw WP Starter Theme
 
 ### Starter theme for WordPress based of _s and Bootstrap 4.
 
