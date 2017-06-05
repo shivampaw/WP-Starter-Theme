@@ -13,7 +13,7 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(autoprefixer('last 2 version'))
         .pipe(minifycss())
-        .pipe(stripCssComments())
+        // .pipe(stripCssComments())
         .pipe(gulp.dest(''))
 });
 
