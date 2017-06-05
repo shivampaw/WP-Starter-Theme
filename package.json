@@ -1,0 +1,29 @@
+{
+  "name": "shivampaw",
+  "version": "1.0.0",
+  "description": "WordPress starter them based on _s and Bootstrap 4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivampaw/shivampaw.git"
+  },
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp"
+  },
+  "author": "Shivam Paw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivampaw/shivampaw/issues"
+  },
+  "homepage": "https://github.com/shivampaw/shivampaw#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "tiny-lr": "^1.0.4"
+  }
+}

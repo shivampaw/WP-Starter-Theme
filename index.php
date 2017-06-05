@@ -7,7 +7,7 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link    https://codex.wordpress.org/Template_Hierarchy
  *
  * @package shivampaw
  */
@@ -20,7 +20,7 @@ get_header(); ?>
 	<div class="col-lg-10 mx-auto" id="site-content">
 <?php endif; ?>
 
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -28,17 +28,21 @@ get_header(); ?>
 				<?php
 				if ( ! is_front_page() ) :
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<p>', '</p>');
+					the_archive_description( '<p>', '</p>' );
 				else:
-					echo '<h1 class="page-title">'; bloginfo('name'); echo '</h1>';
-					echo '<p>'; bloginfo('description'); echo '</p>';
+					echo '<h1 class="page-title">';
+					bloginfo( 'name' );
+					echo '</h1>';
+					echo '<p>';
+					bloginfo( 'description' );
+					echo '</p>';
 				endif; ?>
 			</div>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-				get_template_part('template-parts/content', get_post_format());	
+				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
 
