@@ -1,27 +1,25 @@
 .entry-meta {
-	color: $gray-dark;
-	font-size: 14px;
-	padding-bottom: 20px;
-	border-bottom: 1px dotted $gray;
+  color: $gray-dark;
+  font-size: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted $gray;
 
-	.byline {
-		display: inline;
-	}
+  .byline {
+    display: inline;
+  }
 }
 
 .entry-content, .entry-summary, .page-content {
-    border-bottom: 1px dotted $gray;
-    margin: 10px 0;
-    padding: 5px 0;
+  border-bottom: 1px dotted $gray;
+  margin: 10px 0;
+  padding: 5px 0;
 }
 
 article.post {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .archive-details {
-	padding: 5px;
-	border-radius: 5px;
-	margin-bottom: 20px;
-	border: 1px solid $gray-dark;
+  padding: 5px;
+  margin-bottom: 20px;
 }
