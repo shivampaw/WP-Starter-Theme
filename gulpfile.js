@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     stripCssComments = require('gulp-strip-css-comments')
+
 lr = require('tiny-lr'),
     server = lr();
 

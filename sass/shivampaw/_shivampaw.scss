@@ -2,14 +2,10 @@
  * All our custom SCSS is imported here.
  *
  */
-@import "variables";
-// custom vars for bootstrap and non-boostrap
-@import "../bootstrap/bootstrap";
-// load bootstrap framework
-@import "bootstrap/bootstrap";
-// load all custom modifications to bootstrap framework
-@import "layouts/layouts";
-// load css for WP layouts
+@import "variables"; // custom vars for bootstrap and non-boostrap
+@import "../bootstrap/bootstrap"; // load bootstrap framework
+@import "bootstrap/bootstrap"; // load all custom modifications to bootstrap framework
+@import "layouts/layouts"; // load css for WP layouts
 @import "templates/templates"; // load css for WP templates
 
 // WordPress Core
